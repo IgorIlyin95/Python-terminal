@@ -1,6 +1,6 @@
 # Terminal with filters and gain
 # Terminal with filters for visualization signal from ELEMIO sensor (version for Arduino)
-# 2018-04-18 by ELEMIO (https://github.com/eadf)
+# 2018-04-18 by ELEMIO (https://github.com/ELEMIO/Python-terminal)
 # 
 # Changelog:
 #     2018-04-18 - initial release
