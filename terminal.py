@@ -1,12 +1,12 @@
 # Terminal with filters and gain
-# Terminal with filters for visualization signal from ELEMIO sensor (version for Arduino)
-# 2018-04-18 by ELEMIO (https://github.com/ELEMIO/Python-terminal)
+# Terminal with filters for visualization signal from ELEMYO sensor
+# 2018-04-18 by ELEMYO (https://github.com/ELEMYO/Python-terminal)
 # 
 # Changelog:
 #     2018-04-18 - initial release
 
 # Code is placed under the MIT license
-# Copyright (c) 2018 ELEMIO
+# Copyright (c) 2018 ELEMYO
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -45,7 +45,7 @@ class MYO(QtWidgets.QMainWindow):
     def initUI(self): 
         self.setWindowTitle("MYO")
         # Values
-        COM = "COM23"
+        COM = "COM2"
         self.l = 1 #Current point
         self.dt = 1 #Update time in ms
         self.fs = 1 / self.dt #Sample frequency
@@ -75,6 +75,8 @@ class MYO(QtWidgets.QMainWindow):
         # Plot widget
         self.pw = pg.PlotWidget(background = (35 , 35, 35, 255))
         self.pw.showGrid(x = True, y = True, alpha = 0.7) 
+        self.pw.setLabel('bottom', 'Time', 's')
+        self.pw.setLabel('left', 'Data')
         self.p1 = self.pw.plot()
         self.p1.setPen(color=(255,255*0.2,255*0.2), width=1)
         # Styles
